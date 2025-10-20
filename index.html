@@ -3,147 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Lucas Larchevêque</title>
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+    <text y=%22.9em%22 font-size=%2290%22>❦</text>
+    </svg>">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Fichier CSS externe -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">Mon Portfolio</h1>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <!-- Menu déroulant -->
+    <nav class="dropdown-menu">
+        <button class="menu-button" id="menuButton">
+            <span class="menu-icon">☰</span>
+            <span class="menu-text">Vers les projets</span>
+        </button>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="#projet1">Projet 1</a>
+            <a href="#projet2">Projet 2</a>
+            <a href="#projet3">Projet 3</a>
+            <a href="#projet4">Projet 4</a>
         </div>
     </nav>
 
-    <!-- Section Accueil -->
-    <section id="accueil" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Bonjour, je suis</h2>
-                <h1 class="hero-title">Lucas Larcheveque</h1>
-                <p class="hero-subtitle">Développeur Web | Designer | Créateur</p>
-                <a href="#contact" class="btn">Me contacter</a>
-            </div>
+    <!-- Section Hero -->
+    <section class="hero-section" id="hero">
+        <div class="ornament top-left">❦</div>
+        <div class="ornament bottom-right">❦</div>
+        
+        <div class="photo-container">
+            <img src="ressources/cowboydanslaville.png" alt="Photo de profil">
         </div>
+        
+        <div class="hero-text">
+            <h1>Lucas Larchevêque</h1>
+            <p class="subtitle">DÉVELOPPEUR FULL STACK</p>
+        </div>
+        
+        <button class="scroll-indicator" id="scrollButton" aria-label="Défiler vers le bas"></button>
     </section>
 
-    <!-- Section À propos -->
-    <section id="apropos" class="about">
-        <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Je suis un développeur passionné par la création d'expériences web modernes et intuitives. Avec plusieurs années d'expérience, je transforme des idées en réalité numérique.</p>
-                    <p>Mon approche combine créativité et expertise technique pour livrer des projets qui dépassent les attentes.</p>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">Photo</div>
-                </div>
+    <!-- Section Bio -->
+    <section class="bio-section" id="bio">
+        <div class="bio-container">
+            <div class="bio-photo-container">
+                <img src="ressources/photolucas.jpg" alt="Photo secondaire">
             </div>
-        </div>
-    </section>
-
-    <!-- Section Compétences -->
-    <section id="competences" class="skills">
-        <div class="container">
-            <h2 class="section-title">Mes Compétences</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>HTML & CSS</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
+            
+            <div class="bio-content">
+                <h2>À propos</h2>
+                <p>
+                    Développeur passionné par la création d'applications performantes et élégantes. 
+                    J'aime transformer des idées complexes en solutions simples et efficaces.
+                </p>
+                
+                <div class="skills">
+                    <div class="skill-tag">Go Lang</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">Backend</div>
                 </div>
-                <div class="skill-card">
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>React</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Design UI/UX</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
-                    </div>
+                
+                <p>
+                    Spécialisé en développement backend avec Go et en création d'interfaces 
+                    dynamiques avec JavaScript. Toujours à la recherche de nouveaux défis 
+                    techniques et d'opportunités d'apprentissage.
+                </p>
+                
+                <div class="buttons-container">
+                    <a href="#" class="btn"><span>📄 Mon CV</span></a>
+                    <a href="https://www.linkedin.com/in/lucas-larchev%C3%AAque-8b34b6171/" class="btn" target="_blank"><span>💼 LinkedIn</span></a>
+                    <a href="https://github.com/lucaslarcheveque?tab=overview&from=2025-10-01&to=2025-10-16" class="btn" target="_blank"><span>🐙 GitHub</span></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Projets -->
-    <section id="projets" class="projects">
-        <div class="container">
-            <h2 class="section-title">Mes Projets</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">Projet 1</div>
-                    <div class="project-info">
-                        <h3>Nom du Projet</h3>
-                        <p>Description courte du projet et des technologies utilisées.</p>
-                        <a href="#" class="project-link">Voir le projet →</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">Projet 2</div>
-                    <div class="project-info">
-                        <h3>Nom du Projet</h3>
-                        <p>Description courte du projet et des technologies utilisées.</p>
-                        <a href="#" class="project-link">Voir le projet →</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">Projet 3</div>
-                    <div class="project-info">
-                        <h3>Nom du Projet</h3>
-                        <p>Description courte du projet et des technologies utilisées.</p>
-                        <a href="#" class="project-link">Voir le projet →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script>
+        // Gestion du menu déroulant
+        const menuButton = document.getElementById('menuButton');
+        const dropdownContent = document.getElementById('dropdownContent');
 
-    <!-- Section Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Me Contacter</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Votre nom" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Votre email" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Votre message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Envoyer</button>
-            </form>
-        </div>
-    </section>
+        menuButton.addEventListener('click', function() {
+            dropdownContent.classList.toggle('show');
+        });
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Votre Nom. Tous droits réservés.</p>
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-                <a href="#">Twitter</a>
-            </div>
-        </div>
-    </footer>
+        // Fermer le menu si on clique ailleurs
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.menu-button') && !event.target.matches('.menu-icon') && !event.target.matches('.menu-text')) {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+            }
+        });
+
+        // Gestion du bouton de défilement
+        const scrollButton = document.getElementById('scrollButton');
+        const bioSection = document.getElementById('bio');
+
+        scrollButton.addEventListener('click', function() {
+            bioSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
